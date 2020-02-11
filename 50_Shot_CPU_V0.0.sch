@@ -13029,6 +13029,7 @@ unfilled</description>
 <frame x1="-182.88" y1="-76.2" x2="276.86" y2="220.98" columns="8" rows="5" layer="91"/>
 <text x="-129.54" y="-38.1" size="1.778" layer="91">***Note: Change R9 to 000 ohm if used for -X of touch screen. </text>
 <text x="132.08" y="167.64" size="1.778" layer="91">Adding this text, pushing, deleting from laptop, pulling</text>
+<text x="144.78" y="162.56" size="1.778" layer="91">it worked, try yhis again</text>
 </plain>
 <instances>
 <instance part="C10" gate="G$1" x="22.86" y="114.3" smashed="yes">
