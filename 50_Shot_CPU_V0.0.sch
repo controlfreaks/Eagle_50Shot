@@ -14210,11 +14210,6 @@ unfilled</description>
 </net>
 <net name="GLV_RELAY" class="0">
 <segment>
-<wire x1="-7.62" y1="53.34" x2="-27.94" y2="53.34" width="0.1524" layer="91"/>
-<label x="-27.94" y="53.34" size="1.778" layer="95" rot="R180" xref="yes"/>
-<pinref part="X5" gate="-8" pin="S"/>
-</segment>
-<segment>
 <label x="43.18" y="210.82" size="1.778" layer="95" rot="R180" xref="yes"/>
 <wire x1="60.96" y1="210.82" x2="50.8" y2="210.82" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="210.82" x2="43.18" y2="210.82" width="0.1524" layer="91"/>
@@ -14495,6 +14490,11 @@ unfilled</description>
 <junction x="-101.6" y="137.16"/>
 <wire x1="-101.6" y1="144.78" x2="-111.76" y2="144.78" width="0.1524" layer="91"/>
 <label x="-111.76" y="144.78" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<wire x1="-7.62" y1="55.88" x2="-10.16" y2="55.88" width="0.1524" layer="91"/>
+<label x="-10.16" y="55.88" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="X5" gate="-7" pin="S"/>
 </segment>
 </net>
 <net name="GALV_OUT" class="0">
@@ -14793,11 +14793,6 @@ unfilled</description>
 </net>
 <net name="SHIFT_EN" class="0">
 <segment>
-<wire x1="-7.62" y1="55.88" x2="-10.16" y2="55.88" width="0.1524" layer="91"/>
-<label x="-10.16" y="55.88" size="1.778" layer="95" rot="R180" xref="yes"/>
-<pinref part="X5" gate="-7" pin="S"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="G$1" pin="U1TX/RF3"/>
 <wire x1="195.58" y1="-10.16" x2="198.12" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="-10.16" x2="198.12" y2="-33.02" width="0.1524" layer="91"/>
@@ -14807,6 +14802,11 @@ unfilled</description>
 <wire x1="203.2" y1="-33.02" x2="210.82" y2="-33.02" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="-30.48" x2="203.2" y2="-33.02" width="0.1524" layer="91"/>
 <junction x="203.2" y="-33.02"/>
+</segment>
+<segment>
+<wire x1="-7.62" y1="53.34" x2="-27.94" y2="53.34" width="0.1524" layer="91"/>
+<label x="-27.94" y="53.34" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="X5" gate="-8" pin="S"/>
 </segment>
 </net>
 </nets>
