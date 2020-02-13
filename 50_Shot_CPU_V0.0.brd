@@ -3476,6 +3476,8 @@ design rules under a new name.</description>
 <attribute name="OC_NEWARK" value="30H4716" x="44.196" y="-34.798" size="1.016" layer="27" display="off"/>
 </element>
 <element name="C6" library="rcl" package="C0805" value=".01uf" x="50.038" y="-35.56"/>
+<element name="JP12" library="Mine" package="SHERLOCK_8PIN-RGT" value="SHERLOCK_8PIN_RGT" x="8.89" y="-107.95"/>
+<element name="JP13" library="Mine" package="SHERLOCK_8PIN-RGT" value="SHERLOCK_8PIN_RGT" x="8.89" y="-123.19"/>
 </elements>
 <signals>
 <signal name="+12V">
@@ -3702,15 +3704,17 @@ design rules under a new name.</description>
 <wire x1="17.272" y1="59.182" x2="15.494" y2="57.404" width="0.254" layer="16"/>
 <contactref element="IC2" pad="5"/>
 <contactref element="C6" pad="2"/>
-<wire x1="65.532" y1="-18.288" x2="77.216" y2="-18.542" width="0" layer="19" extent="1-1"/>
-<wire x1="52.324" y1="-17.78" x2="65.532" y2="-18.288" width="0" layer="19" extent="1-1"/>
-<wire x1="40.64" y1="-18.288" x2="52.324" y2="-17.78" width="0" layer="19" extent="1-1"/>
-<wire x1="27.686" y1="-19.05" x2="40.64" y2="-18.288" width="0" layer="19" extent="1-1"/>
+<contactref element="JP12" pad="1"/>
+<wire x1="2.064" y1="-46.99" x2="15.89" y2="-107.95" width="0" layer="19" extent="1-1"/>
+<wire x1="13.89" y1="-33.782" x2="2.064" y2="-46.99" width="0" layer="19" extent="1-1"/>
+<wire x1="27.686" y1="-19.05" x2="13.89" y2="-33.782" width="0" layer="19" extent="1-1"/>
+<wire x1="40.64" y1="-18.288" x2="27.686" y2="-19.05" width="0" layer="19" extent="1-1"/>
+<wire x1="52.324" y1="-17.78" x2="40.64" y2="-18.288" width="0" layer="19" extent="1-1"/>
+<wire x1="65.532" y1="-18.288" x2="52.324" y2="-17.78" width="0" layer="19" extent="1-1"/>
+<wire x1="77.216" y1="-18.542" x2="65.532" y2="-18.288" width="0" layer="19" extent="1-1"/>
 <wire x1="45.171" y1="-31.873" x2="40.64" y2="-18.288" width="0" layer="19" extent="1-1"/>
 <wire x1="50.988" y1="-35.56" x2="45.171" y2="-31.873" width="0" layer="19" extent="1-1"/>
 <wire x1="45.546" y1="-51.308" x2="50.988" y2="-35.56" width="0" layer="19" extent="1-1"/>
-<wire x1="13.89" y1="-33.782" x2="27.686" y2="-19.05" width="0" layer="19" extent="1-1"/>
-<wire x1="2.064" y1="-46.99" x2="13.89" y2="-33.782" width="0" layer="19" extent="1-1"/>
 <wire x1="80.07" y1="2.78" x2="77.216" y2="-18.542" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VDD">
@@ -3898,13 +3902,15 @@ design rules under a new name.</description>
 <contactref element="C17" pad="1"/>
 <contactref element="IC2" pad="8"/>
 <contactref element="C6" pad="1"/>
+<contactref element="JP12" pad="2"/>
 <wire x1="32.29" y1="72.31" x2="32.31" y2="72.33" width="0" layer="19" extent="1-1"/>
 <wire x1="54.356" y1="24.13" x2="53.5194" y2="21.4106" width="0" layer="19" extent="1-1"/>
 <wire x1="5.842" y1="63.212" x2="10.414" y2="63.754" width="0" layer="19" extent="1-16"/>
 <wire x1="-1.59" y1="-9.144" x2="15.756" y2="7.052" width="0" layer="19" extent="1-1"/>
 <wire x1="43.221" y1="-31.873" x2="17.018" y2="7.112" width="0" layer="19" extent="1-1"/>
 <wire x1="49.088" y1="-35.56" x2="43.221" y2="-31.873" width="0" layer="19" extent="1-1"/>
-<wire x1="43.546" y1="-51.308" x2="43.221" y2="-31.873" width="0" layer="19" extent="1-1"/>
+<wire x1="43.546" y1="-51.308" x2="49.088" y2="-35.56" width="0" layer="19" extent="1-1"/>
+<wire x1="13.89" y1="-107.95" x2="43.546" y2="-51.308" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SM_LED">
 <contactref element="IC1" pad="28"/>
@@ -4550,51 +4556,79 @@ design rules under a new name.</description>
 </signal>
 <signal name="RD15">
 <contactref element="IC1" pad="48"/>
+<contactref element="JP12" pad="8"/>
+<wire x1="19.04" y1="54.89" x2="1.89" y2="-107.95" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="RD14">
+<signal name="RD14_RST">
 <contactref element="IC1" pad="47"/>
+<contactref element="JP12" pad="7"/>
+<wire x1="19.04" y1="55.39" x2="3.89" y2="-107.95" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RD1">
 <contactref element="IC1" pad="76"/>
 </signal>
-<signal name="RD2">
+<signal name="RD2_D0">
 <contactref element="IC1" pad="77"/>
+<contactref element="JP13" pad="1"/>
+<wire x1="34.54" y1="54.39" x2="15.89" y2="-123.19" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="RD3">
+<signal name="RD3_D1">
 <contactref element="IC1" pad="78"/>
+<contactref element="JP13" pad="2"/>
+<wire x1="34.54" y1="54.89" x2="13.89" y2="-123.19" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="RD12">
+<signal name="RD12_WR">
 <contactref element="IC1" pad="79"/>
+<contactref element="JP12" pad="5"/>
+<wire x1="34.54" y1="55.39" x2="7.89" y2="-107.95" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="RD13">
+<signal name="RD13_RD">
 <contactref element="IC1" pad="80"/>
+<contactref element="JP12" pad="6"/>
+<wire x1="34.54" y1="55.89" x2="5.89" y2="-107.95" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="RD4">
+<signal name="RD4_D2">
 <contactref element="IC1" pad="81"/>
+<contactref element="JP13" pad="3"/>
+<wire x1="34.54" y1="56.39" x2="11.89" y2="-123.19" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="RD5">
+<signal name="RD5_D3">
 <contactref element="IC1" pad="82"/>
+<contactref element="JP13" pad="4"/>
+<wire x1="34.54" y1="56.89" x2="9.89" y2="-123.19" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="RD6">
+<signal name="RD6_D4">
 <contactref element="IC1" pad="83"/>
+<contactref element="JP13" pad="5"/>
+<wire x1="34.54" y1="57.39" x2="7.89" y2="-123.19" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="RD7">
+<signal name="RD7_D5">
 <contactref element="IC1" pad="84"/>
+<contactref element="JP13" pad="6"/>
+<wire x1="34.54" y1="57.89" x2="5.89" y2="-123.19" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="RD8">
+<signal name="RD8_D6">
 <contactref element="IC1" pad="68"/>
+<contactref element="JP13" pad="7"/>
+<wire x1="29.29" y1="52.14" x2="3.89" y2="-123.19" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="RD9">
+<signal name="RD9_D7">
 <contactref element="IC1" pad="69"/>
+<contactref element="JP13" pad="8"/>
+<wire x1="29.79" y1="52.14" x2="1.89" y2="-123.19" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="RD10">
+<signal name="RD10_CS">
 <contactref element="IC1" pad="70"/>
+<contactref element="JP12" pad="3"/>
+<wire x1="30.29" y1="52.14" x2="11.89" y2="-107.95" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RD0">
 <contactref element="IC1" pad="72"/>
 </signal>
-<signal name="RD11">
+<signal name="RD11_CD">
 <contactref element="IC1" pad="71"/>
+<contactref element="JP12" pad="4"/>
+<wire x1="30.79" y1="52.14" x2="9.89" y2="-107.95" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="ARM_RELAY">
 <contactref element="U1" pad="3"/>
