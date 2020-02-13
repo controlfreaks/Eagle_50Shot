@@ -11840,6 +11840,26 @@ package type OT</description>
 <text x="1.6" y="2" size="1.27" layer="21">1</text>
 <text x="-0.5" y="2" size="1.27" layer="21">2</text>
 </package>
+<package name="SHERLOCK_6PIN_RGT">
+<wire x1="-7" y1="-2" x2="7" y2="-2" width="0.127" layer="21"/>
+<wire x1="7" y1="-2" x2="7" y2="8.5" width="0.127" layer="21"/>
+<wire x1="-7" y1="-2" x2="-7" y2="8.5" width="0.127" layer="21"/>
+<wire x1="-7" y1="8.5" x2="7" y2="8.5" width="0.127" layer="21"/>
+<pad name="1" x="5" y="0" drill="0.8128" shape="square"/>
+<pad name="2" x="3" y="0" drill="0.8128"/>
+<pad name="3" x="1" y="0" drill="0.8128"/>
+<pad name="4" x="-1" y="0" drill="0.8128"/>
+<pad name="5" x="-3" y="0" drill="0.8128"/>
+<pad name="6" x="-5" y="0" drill="0.8128"/>
+<text x="-7" y="-3.5" size="1.27" layer="25">&gt;NAME</text>
+<rectangle x1="-0.5" y1="-2" x2="0.5" y2="-1.5" layer="21"/>
+<text x="4.6" y="2" size="1.27" layer="21">1</text>
+<text x="2.6" y="2" size="1.27" layer="21">2</text>
+<text x="0.6" y="2" size="1.27" layer="21">3</text>
+<text x="-1.4" y="2" size="1.27" layer="21">4</text>
+<text x="-3.4" y="2.1" size="1.27" layer="21">5</text>
+<text x="-5.4" y="2" size="1.27" layer="21">6</text>
+</package>
 </packages>
 <symbols>
 <symbol name="CAP-US-POL">
@@ -12046,6 +12066,19 @@ package type OT</description>
 <text x="0" y="-5.08" size="1.27" layer="95">&gt;NAME</text>
 <pin name="1" x="-5.08" y="2.54" length="middle"/>
 <pin name="2" x="-5.08" y="0" length="middle"/>
+</symbol>
+<symbol name="6PIN">
+<wire x1="0" y1="-10.16" x2="0" y2="7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="7.62" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-10.16" x2="0" y2="-10.16" width="0.254" layer="94"/>
+<text x="0" y="-12.7" size="1.27" layer="95">&gt;NAME</text>
+<pin name="1" x="-5.08" y="5.08" length="middle"/>
+<pin name="2" x="-5.08" y="2.54" length="middle"/>
+<pin name="3" x="-5.08" y="0" length="middle"/>
+<pin name="4" x="-5.08" y="-2.54" length="middle"/>
+<pin name="5" x="-5.08" y="-5.08" length="middle"/>
+<pin name="6" x="-5.08" y="-7.62" length="middle"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -12503,6 +12536,27 @@ Omron G6S-2F series</description>
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SHERLOCK_6PIN_RGT" prefix="JP">
+<description>2mm Pitch</description>
+<gates>
+<gate name="G$1" symbol="6PIN" x="-2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="SHERLOCK_6PIN_RGT">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -13231,6 +13285,7 @@ unfilled</description>
 <part name="SUPPLY15" library="supply2" deviceset="GND" device=""/>
 <part name="JP12" library="Mine" deviceset="SHERLOCK_8PIN_RGT" device=""/>
 <part name="JP13" library="Mine" deviceset="SHERLOCK_8PIN_RGT" device=""/>
+<part name="JP14" library="Mine" deviceset="SHERLOCK_6PIN_RGT" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -13257,6 +13312,7 @@ unfilled</description>
 <text x="-93.98" y="180.34" size="1.778" layer="91">Expansion Header B</text>
 <text x="215.9" y="198.12" size="1.778" layer="91">Parallel Display Header A</text>
 <text x="215.9" y="162.56" size="1.778" layer="91">Parallel Display Header B</text>
+<text x="228.6" y="129.54" size="1.778" layer="91">UART Header</text>
 </plain>
 <instances>
 <instance part="C10" gate="G$1" x="22.86" y="114.3" smashed="yes">
@@ -13555,6 +13611,7 @@ unfilled</description>
 </instance>
 <instance part="JP12" gate="G$1" x="238.76" y="180.34"/>
 <instance part="JP13" gate="G$1" x="238.76" y="147.32"/>
+<instance part="JP14" gate="G$1" x="238.76" y="119.38"/>
 </instances>
 <busses>
 </busses>
@@ -13878,6 +13935,11 @@ unfilled</description>
 <wire x1="233.68" y1="190.5" x2="228.6" y2="190.5" width="0.1524" layer="91"/>
 <label x="228.6" y="190.5" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="JP14" gate="G$1" pin="2"/>
+<wire x1="233.68" y1="121.92" x2="213.36" y2="121.92" width="0.1524" layer="91"/>
+<label x="213.36" y="121.92" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="VDD" class="0">
 <segment>
@@ -14002,6 +14064,11 @@ unfilled</description>
 <pinref part="JP12" gate="G$1" pin="2"/>
 <wire x1="233.68" y1="187.96" x2="213.36" y2="187.96" width="0.1524" layer="91"/>
 <label x="213.36" y="187.96" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="JP14" gate="G$1" pin="1"/>
+<wire x1="233.68" y1="124.46" x2="231.14" y2="124.46" width="0.1524" layer="91"/>
+<label x="231.14" y="124.46" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="SM_LED" class="0">
@@ -14410,9 +14477,9 @@ unfilled</description>
 <net name="RD15" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="!U1RTS/BCLK1/CN21/RD15"/>
-<wire x1="154.94" y1="-17.78" x2="154.94" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="-20.32" x2="160.02" y2="-20.32" width="0.1524" layer="91"/>
-<label x="160.02" y="-20.32" size="1.778" layer="95" xref="yes"/>
+<wire x1="154.94" y1="-17.78" x2="154.94" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="-33.02" x2="162.56" y2="-33.02" width="0.1524" layer="91"/>
+<label x="162.56" y="-33.02" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="JP12" gate="G$1" pin="8"/>
@@ -14423,9 +14490,9 @@ unfilled</description>
 <net name="RD14_RST" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="!U1CTS/CN20/RD14"/>
-<wire x1="152.4" y1="-17.78" x2="152.4" y2="-25.4" width="0.1524" layer="91"/>
-<wire x1="152.4" y1="-25.4" x2="160.02" y2="-25.4" width="0.1524" layer="91"/>
-<label x="160.02" y="-25.4" size="1.778" layer="95" xref="yes"/>
+<wire x1="152.4" y1="-17.78" x2="152.4" y2="-38.1" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="-38.1" x2="160.02" y2="-38.1" width="0.1524" layer="91"/>
+<label x="160.02" y="-38.1" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="JP12" gate="G$1" pin="7"/>
@@ -14886,8 +14953,9 @@ unfilled</description>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="PMA11/AN12/RB12"/>
-<wire x1="137.16" y1="-17.78" x2="137.16" y2="-20.32" width="0.1524" layer="91"/>
-<label x="137.16" y="-20.32" size="1.778" layer="95" rot="R270" xref="yes"/>
+<wire x1="137.16" y1="-17.78" x2="137.16" y2="-22.86" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="-22.86" x2="139.7" y2="-22.86" width="0.1524" layer="91"/>
+<label x="139.7" y="-22.86" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="RF2_X-" class="0">
@@ -14927,9 +14995,9 @@ unfilled</description>
 <segment>
 <pinref part="IC1" gate="G$1" pin="PMA10/AN13/RB13"/>
 <wire x1="139.7" y1="-17.78" x2="139.7" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="-20.32" x2="142.24" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="142.24" y1="-20.32" x2="142.24" y2="-22.86" width="0.1524" layer="91"/>
-<label x="142.24" y="-22.86" size="1.778" layer="95" rot="R270" xref="yes"/>
+<wire x1="139.7" y1="-20.32" x2="144.78" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="144.78" y1="-20.32" x2="144.78" y2="-22.86" width="0.1524" layer="91"/>
+<label x="144.78" y="-22.86" size="1.778" layer="95" rot="R270" xref="yes"/>
 </segment>
 </net>
 <net name="RG7_MISO" class="0">
@@ -15176,6 +15244,56 @@ unfilled</description>
 <pinref part="IC2" gate="G$1" pin="ORG"/>
 <wire x1="154.94" y1="167.64" x2="142.24" y2="167.64" width="0.1524" layer="91"/>
 <label x="142.24" y="167.64" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="RF13_U2RTS" class="0">
+<segment>
+<pinref part="JP14" gate="G$1" pin="5"/>
+<wire x1="233.68" y1="114.3" x2="231.14" y2="114.3" width="0.1524" layer="91"/>
+<label x="231.14" y="114.3" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="!U2RTS/BCLK2/RF13"/>
+<wire x1="132.08" y1="-17.78" x2="132.08" y2="-45.72" width="0.1524" layer="91"/>
+<label x="132.08" y="-45.72" size="1.778" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="RF12_U2CTS" class="0">
+<segment>
+<pinref part="JP14" gate="G$1" pin="6"/>
+<wire x1="233.68" y1="111.76" x2="210.82" y2="111.76" width="0.1524" layer="91"/>
+<label x="210.82" y="111.76" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="!U2CTS/RF12"/>
+<wire x1="134.62" y1="-17.78" x2="134.62" y2="-22.86" width="0.1524" layer="91"/>
+<label x="134.62" y="-22.86" size="1.778" layer="95" rot="R270" xref="yes"/>
+</segment>
+</net>
+<net name="RF5_U2TX" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="PMA8/U2TX/CN18/RF5"/>
+<wire x1="160.02" y1="-17.78" x2="160.02" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="-20.32" x2="165.1" y2="-20.32" width="0.1524" layer="91"/>
+<label x="165.1" y="-20.32" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="JP14" gate="G$1" pin="4"/>
+<wire x1="233.68" y1="116.84" x2="210.82" y2="116.84" width="0.1524" layer="91"/>
+<label x="210.82" y="116.84" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="RF4_U2RX" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="PMA9/U2RX/CN17/RF4"/>
+<wire x1="157.48" y1="-17.78" x2="157.48" y2="-25.4" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="-25.4" x2="165.1" y2="-25.4" width="0.1524" layer="91"/>
+<label x="165.1" y="-25.4" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="JP14" gate="G$1" pin="3"/>
+<wire x1="233.68" y1="119.38" x2="231.14" y2="119.38" width="0.1524" layer="91"/>
+<label x="231.14" y="119.38" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
