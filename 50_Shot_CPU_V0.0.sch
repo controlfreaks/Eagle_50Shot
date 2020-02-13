@@ -11088,21 +11088,6 @@ Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</descriptio
 <rectangle x1="5.715" y1="2.032" x2="10.541" y2="2.54" layer="21"/>
 <rectangle x1="5.715" y1="-2.54" x2="10.541" y2="-2.032" layer="21"/>
 </package>
-<package name="22-23-2031">
-<description>.100" (2.54mm) Center Header - 3 Pin</description>
-<wire x1="-3.81" y1="3.175" x2="3.81" y2="3.175" width="0.254" layer="21"/>
-<wire x1="3.81" y1="3.175" x2="3.81" y2="1.27" width="0.254" layer="21"/>
-<wire x1="3.81" y1="1.27" x2="3.81" y2="-3.175" width="0.254" layer="21"/>
-<wire x1="3.81" y1="-3.175" x2="-3.81" y2="-3.175" width="0.254" layer="21"/>
-<wire x1="-3.81" y1="-3.175" x2="-3.81" y2="1.27" width="0.254" layer="21"/>
-<wire x1="-3.81" y1="1.27" x2="-3.81" y2="3.175" width="0.254" layer="21"/>
-<wire x1="-3.81" y1="1.27" x2="3.81" y2="1.27" width="0.254" layer="21"/>
-<pad name="1" x="-2.54" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="2" x="0" y="0" drill="1" shape="long" rot="R90"/>
-<pad name="3" x="2.54" y="0" drill="1" shape="long" rot="R90"/>
-<text x="-3.81" y="3.81" size="1.016" layer="25" ratio="10">&gt;NAME</text>
-<text x="-3.81" y="-5.08" size="1.016" layer="27" ratio="10">&gt;VALUE</text>
-</package>
 <package name="G6K-2F">
 <description>&lt;b&gt;Low Signal Relay&lt;/b&gt;&lt;p&gt;
 oeiwcsnts1.omron.com/.. D20G6K0100.pdf</description>
@@ -11547,6 +11532,20 @@ package type OT</description>
 <text x="-5.3" y="2" size="1.27" layer="21">7</text>
 <text x="-7.4" y="2" size="1.27" layer="21">8</text>
 </package>
+<package name="SHERLOCK_3PIN_RGT">
+<wire x1="-4" y1="-2" x2="4" y2="-2" width="0.127" layer="21"/>
+<wire x1="4" y1="-2" x2="4" y2="8.5" width="0.127" layer="21"/>
+<wire x1="-4" y1="-2" x2="-4" y2="8.5" width="0.127" layer="21"/>
+<wire x1="-4" y1="8.5" x2="4" y2="8.5" width="0.127" layer="21"/>
+<pad name="1" x="2" y="0" drill="0.8128" shape="square"/>
+<pad name="2" x="0" y="0" drill="0.8128"/>
+<pad name="3" x="-2" y="0" drill="0.8128"/>
+<text x="-4" y="-3.5" size="1.27" layer="25">&gt;NAME</text>
+<rectangle x1="-0.5" y1="-2" x2="0.5" y2="-1.5" layer="21"/>
+<text x="1.6" y="2" size="1.27" layer="21">1</text>
+<text x="-0.4" y="2" size="1.27" layer="21">2</text>
+<text x="-2.4" y="2" size="1.27" layer="21">3</text>
+</package>
 </packages>
 <symbols>
 <symbol name="CAP-US-POL">
@@ -11743,6 +11742,16 @@ package type OT</description>
 <pin name="7" x="-5.08" y="-5.08" length="middle"/>
 <pin name="8" x="-5.08" y="-7.62" length="middle"/>
 </symbol>
+<symbol name="3PIN">
+<wire x1="0" y1="-5.08" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="0" y2="-5.08" width="0.254" layer="94"/>
+<text x="0" y="-7.62" size="1.27" layer="95">&gt;NAME</text>
+<pin name="1" x="-5.08" y="2.54" length="middle"/>
+<pin name="2" x="-5.08" y="0" length="middle"/>
+<pin name="3" x="-5.08" y="-2.54" length="middle"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="CAP3X3" prefix="C" uservalue="yes">
@@ -11911,31 +11920,6 @@ Digikey Part # A311422-ND</description>
 </connects>
 <technologies>
 <technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="22-23-2031" prefix="X">
-<description>.100" (2.54mm) Center Header - 3 Pin</description>
-<gates>
-<gate name="-1" symbol="MV" x="0" y="2.54" addlevel="always" swaplevel="1"/>
-<gate name="-2" symbol="M" x="0" y="0" addlevel="always" swaplevel="1"/>
-<gate name="-3" symbol="M" x="0" y="-2.54" addlevel="always" swaplevel="1"/>
-</gates>
-<devices>
-<device name="" package="22-23-2031">
-<connects>
-<connect gate="-1" pin="S" pad="1"/>
-<connect gate="-2" pin="S" pad="2"/>
-<connect gate="-3" pin="S" pad="3"/>
-</connects>
-<technologies>
-<technology name="">
-<attribute name="MF" value="MOLEX" constant="no"/>
-<attribute name="MPN" value="22-23-2031" constant="no"/>
-<attribute name="OC_FARNELL" value="1462950" constant="no"/>
-<attribute name="OC_NEWARK" value="30C0862" constant="no"/>
-</technology>
 </technologies>
 </device>
 </devices>
@@ -12203,6 +12187,23 @@ Omron G6S-2F series</description>
 <connect gate="G$1" pin="6" pad="6"/>
 <connect gate="G$1" pin="7" pad="7"/>
 <connect gate="G$1" pin="8" pad="8"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SHERLOCK_3PIN_RGT" prefix="JP">
+<gates>
+<gate name="G$1" symbol="3PIN" x="-2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="SHERLOCK_3PIN_RGT">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -13027,7 +13028,6 @@ unfilled</description>
 <part name="R3" library="rcl" deviceset="R-US_" device="M0805" value="10k"/>
 <part name="C2" library="rcl" deviceset="C-US" device="C0805" value="10nF"/>
 <part name="C3" library="rcl" deviceset="C-US" device="C0805" value="10nF"/>
-<part name="X1" library="Mine" deviceset="22-23-2031" device=""/>
 <part name="C8" library="rcl" deviceset="C-US" device="C0805" value=".01uf"/>
 <part name="C4" library="rcl" deviceset="C-US" device="C0805" value=".01uF"/>
 <part name="C6" library="rcl" deviceset="C-US" device="C0805" value=".01uF"/>
@@ -13058,6 +13058,7 @@ unfilled</description>
 <part name="R19" library="rcl-2" deviceset="R-US_" device="M0805" value="1k"/>
 <part name="JP1" library="Mine" deviceset="SHERLOCK_4PIN_RGT" device=""/>
 <part name="JP2" library="Mine" deviceset="SHERLOCK_8PIN_RGT" device=""/>
+<part name="JP3" library="Mine" deviceset="SHERLOCK_3PIN_RGT" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -13083,6 +13084,7 @@ unfilled</description>
 <text x="132.08" y="167.64" size="1.778" layer="91">Adding this text, pushing, deleting from laptop, pulling</text>
 <text x="144.78" y="162.56" size="1.778" layer="91">it worked, try yhis again</text>
 <text x="-81.28" y="-43.18" size="2.1844" layer="91">Touch Screen Header</text>
+<text x="-170.18" y="71.12" size="1.778" layer="91">Rotary Encoder</text>
 </plain>
 <instances>
 <instance part="C10" gate="G$1" x="22.86" y="114.3" smashed="yes">
@@ -13316,9 +13318,6 @@ unfilled</description>
 <attribute name="NAME" x="-123.444" y="56.515" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-123.444" y="51.689" size="1.778" layer="96"/>
 </instance>
-<instance part="X1" gate="-1" x="-154.94" y="66.04"/>
-<instance part="X1" gate="-2" x="-154.94" y="63.5"/>
-<instance part="X1" gate="-3" x="-154.94" y="60.96"/>
 <instance part="C8" gate="G$1" x="-12.7" y="78.74" smashed="yes">
 <attribute name="NAME" x="-19.304" y="81.915" size="1.778" layer="95"/>
 <attribute name="VALUE" x="-19.304" y="79.629" size="1.778" layer="96"/>
@@ -13423,6 +13422,7 @@ unfilled</description>
 </instance>
 <instance part="JP1" gate="G$1" x="-66.04" y="-50.8"/>
 <instance part="JP2" gate="G$1" x="-53.34" y="50.8"/>
+<instance part="JP3" gate="G$1" x="-154.94" y="63.5" rot="MR0"/>
 </instances>
 <busses>
 </busses>
@@ -13598,11 +13598,11 @@ unfilled</description>
 <wire x1="-124.46" y1="48.26" x2="-99.06" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="-124.46" y1="50.8" x2="-124.46" y2="48.26" width="0.1524" layer="91"/>
 <junction x="-124.46" y="48.26"/>
-<pinref part="X1" gate="-3" pin="S"/>
-<wire x1="-157.48" y1="60.96" x2="-147.32" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="-147.32" y1="60.96" x2="-147.32" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="-147.32" y1="48.26" x2="-137.16" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-149.86" y1="60.96" x2="-144.78" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-144.78" y1="60.96" x2="-144.78" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="-144.78" y1="48.26" x2="-137.16" y2="48.26" width="0.1524" layer="91"/>
 <junction x="-137.16" y="48.26"/>
+<pinref part="JP3" gate="G$1" pin="3"/>
 </segment>
 <segment>
 <pinref part="C10" gate="G$1" pin="2"/>
@@ -14034,13 +14034,13 @@ unfilled</description>
 <wire x1="-137.16" y1="68.58" x2="-137.16" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="-137.16" y1="66.04" x2="-124.46" y2="66.04" width="0.1524" layer="91"/>
 <label x="-119.38" y="66.04" size="1.778" layer="95" xref="yes"/>
-<pinref part="X1" gate="-1" pin="S"/>
 <wire x1="-124.46" y1="66.04" x2="-119.38" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="-157.48" y1="66.04" x2="-137.16" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-149.86" y1="66.04" x2="-137.16" y2="66.04" width="0.1524" layer="91"/>
 <junction x="-137.16" y="66.04"/>
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="-124.46" y1="58.42" x2="-124.46" y2="66.04" width="0.1524" layer="91"/>
 <junction x="-124.46" y="66.04"/>
+<pinref part="JP3" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="ENCDR_B" class="0">
@@ -14056,14 +14056,14 @@ unfilled</description>
 <wire x1="-137.16" y1="60.96" x2="-127" y2="60.96" width="0.1524" layer="91"/>
 <label x="-119.38" y="60.96" size="1.778" layer="95" xref="yes"/>
 <wire x1="-127" y1="60.96" x2="-119.38" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="X1" gate="-2" pin="S"/>
-<wire x1="-157.48" y1="63.5" x2="-144.78" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="-144.78" y1="63.5" x2="-144.78" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="-144.78" y1="60.96" x2="-137.16" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-149.86" y1="63.5" x2="-142.24" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="-142.24" y1="63.5" x2="-142.24" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="-142.24" y1="60.96" x2="-137.16" y2="60.96" width="0.1524" layer="91"/>
 <junction x="-137.16" y="60.96"/>
 <pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="-127" y1="68.58" x2="-127" y2="60.96" width="0.1524" layer="91"/>
 <junction x="-127" y="60.96"/>
+<pinref part="JP3" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="RCLK" class="0">
